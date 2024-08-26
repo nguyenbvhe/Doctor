@@ -9,16 +9,16 @@
 
     // MARK: - APIPromotionalList
     struct APIPromotional: Codable {
-        let status: Int
-        let message: String
-        let code: Int
-        let data: PromotionalResponse
+        let status: Int?
+        let message: String?
+        let code: Int?
+        let data: PromotionalResponse?
     }
 
     // MARK: - NewPromotional
     struct PromotionalResponse: Codable {
-        let listTtems: [PromotionalItem]
-        let totalRecord, totalPage, page: Int
+        let listTtems: [PromotionalItem]?
+        let totalRecord, totalPage, page: Int?
 
         enum CodingKeys: String, CodingKey {
             case listTtems = "items"
@@ -30,10 +30,10 @@
 
     // MARK: - Item
     struct PromotionalItem: Codable {
-        let id, categoryID: Int
-        let code, name, slug, content: String
-        let picture: String
-        let fromDate, toDate: String
+        let id, categoryID: Int?
+        let code, name, slug, content: String?
+        let picture: String?
+        let fromDate, toDate: String?
         let amount, type, kind: Int
         let createdAt, categoryName: String
         let link: String
