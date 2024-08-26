@@ -15,10 +15,10 @@ class ArticleTableViewCell: UITableViewCell {
     @IBOutlet private weak var collectionView: UICollectionView!
     weak var delegate: ArticleTableViewCellDelegate?
 
-    var articles = [ArticleList]()  // Sửa từ `article` thành `articles` cho dễ hiểu
+    var articles = [ArticleList]()
     var homeData: HomeData?
     var articleViewModel: ArticleViewModel?
-    let homeService = HomeService()  // Sửa tên biến từ `home` thành `homeService` cho rõ ràng hơn
+    let homeService = HomeService()
     var numberOfArticles = 0
     
     override func awakeFromNib() {
@@ -30,8 +30,8 @@ class ArticleTableViewCell: UITableViewCell {
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 10  // Điều chỉnh khoảng cách giữa các hàng
-        layout.minimumInteritemSpacing = 10  // Điều chỉnh khoảng cách giữa các item trong một hàng
+//        layout.minimumLineSpacing = 10  // Điều chỉnh khoảng cách giữa các hàng
+//        layout.minimumInteritemSpacing = 10  // Điều chỉnh khoảng cách giữa các item trong một hàng
         collectionView.collectionViewLayout = layout
         
     }
@@ -68,21 +68,23 @@ class ArticleTableViewCell: UITableViewCell {
     }
     
 }
-// MARK: - bo góc cho view
-func roundCorners(corners: UIRectCorner, radius: CGFloat, view: UIView) {
-    let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-    let mask = CAShapeLayer()
-    mask.path = path.cgPath
-    view.layer.mask = mask
+//// MARK: - bo góc cho view
+//func roundCorners(corners: UIRectCorner, radius: CGFloat, view: UIView) {
+//    let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+//    let mask = CAShapeLayer()
+//    mask.path = path.cgPath
+//    view.layer.mask = mask
+//}
+
+// MARK: - Helper Method to Apply Shadow
+private func applyShadow(to cell: UICollectionViewCell) {
+    cell.layer.shadowColor = UIColor.black.cgColor
+    cell.layer.shadowOffset = CGSize(width: 0, height: 2)
+    cell.layer.shadowOpacity = 0.3
+    cell.layer.shadowRadius = 4
+    cell.layer.masksToBounds = false
 }
 
-func applyCustomRoundedCorners(to cell: UICollectionViewCell) {
-    // Bo góc trên trái và trên phải nhiều hơn
-    roundCorners(corners: [.topLeft, .topRight], radius: 16, view: cell.contentView)
-    
-    // Nếu bạn muốn bo góc dưới ít hơn, bạn có thể tùy chỉnh:
-    roundCorners(corners: [.bottomLeft, .bottomRight], radius: 8, view: cell.contentView)
-}
 
     
 // MARK: - UICollectionViewDataSource
@@ -100,7 +102,7 @@ extension ArticleTableViewCell: UICollectionViewDataSource {
         cell.layer.borderWidth = 1    // Độ rộng của khung
         cell.layer.borderColor = UIColor.systemGray.withAlphaComponent(0.2).cgColor  // Màu của khung
         // Áp dụng bo góc tùy chỉnh
-        applyCustomRoundedCorners(to: cell)
+        applyShadow(to: cell)
         return cell
     }
 }
@@ -121,17 +123,17 @@ extension ArticleTableViewCell: UICollectionViewDelegateFlowLayout {
         return CGSize(width: 258, height: 220)
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 16  // Khoảng cách giữa các dòng
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 16  // Khoảng cách giữa các cell trong cùng một dòng
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        // Thiết lập khoảng cách giữa các section
-        return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 16  // Khoảng cách giữa các dòng
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 16  // Khoảng cách giữa các cell trong cùng một dòng
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        // Thiết lập khoảng cách giữa các section
+//        return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+//    }
 }
 

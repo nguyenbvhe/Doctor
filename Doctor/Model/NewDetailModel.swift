@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 // MARK: - APINewPromotionalResponse
 struct APINewDetailResponse: Codable {
     let status: Int?
@@ -17,7 +15,7 @@ struct APINewDetailResponse: Codable {
     let data: NewDetailResponse?
 }
 
-// MARK: - DataClass
+// MARK: - NewDetailResponse
 struct NewDetailResponse: Codable {
     let listTtems: [Item]?
     let totalRecord, totalPage, page: Int?
