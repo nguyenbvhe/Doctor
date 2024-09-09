@@ -1,22 +1,20 @@
 import Foundation
-
-// MARK: - APINewResponse
-struct APINewResponse : Codable {
+struct APIModel: Decodable {
     let status: Int
     let message: String
     let code: Int
     let data: HomeData
+    
 }
-
 // MARK: - HomeData
 struct HomeData: Codable {
-    let articleList: [ArticleList]
-    let promotionList: [PromotionList]
-    let doctorList: [DoctorList]
+    let articleList: [Article]
+    let promotionList: [Promotion]
+    let doctorList: [Doctor]
 }
 
 // MARK: - ArticleList
-struct ArticleList: Codable {
+struct Article: Codable {
     let id, categoryID: Int
     let title, slug: String
     let picture: String
@@ -35,7 +33,7 @@ struct ArticleList: Codable {
 }
 
 // MARK: - DoctorList
-struct DoctorList: Codable {
+struct Doctor: Codable {
     let id: Int
     let fullName, name, lastName, contactEmail: String
     let phone: String
@@ -59,7 +57,7 @@ struct DoctorList: Codable {
 }
 
 // MARK: - PromotionList
-struct PromotionList: Codable {
+struct Promotion: Codable {
     let id, categoryID: Int
     let code, name, slug, content: String
     let picture: String

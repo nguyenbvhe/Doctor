@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="258" id="eYe-hu-jhh" customClass="ArticleTableViewCell" customModule="Doctor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="258"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eYe-hu-jhh" id="m0T-qG-NeD">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="258"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tin tức" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lb0-dz-PGY">
+                        <rect key="frame" x="15.999999999999996" y="15.000000000000002" width="55.666666666666657" height="20.666666666666671"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.14117647059999999" green="0.1647058824" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" red="0.14117647059999999" green="0.1647058824" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uv8-0R-1Rv">
+                        <rect key="frame" x="216" y="11.333333333333336" width="99" height="28"/>
+                        <color key="tintColor" red="0.054901960780000002" green="0.67843137249999996" blue="0.41176470590000003" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Xem tất cả">
+                            <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
+                        </state>
+                        <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="Xem tất cả" subtitle="" imagePadding="5" buttonSize="small">
+                            <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
+                            <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                            <color key="baseForegroundColor" red="0.054901960780000002" green="0.67843137249999996" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="seeDidtapped:" destination="eYe-hu-jhh" eventType="touchUpInside" id="2ez-bO-wul"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zia-Kn-gAI" userLabel="ViewCollection">
+                        <rect key="frame" x="16" y="50" width="304" height="208"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="R5w-uB-bqk">
+                                <rect key="frame" x="0.0" y="0.0" width="304" height="208"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ypI-xe-Zq9">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="R5w-uB-bqk" secondAttribute="bottom" id="ODc-qU-Gcq"/>
+                            <constraint firstItem="R5w-uB-bqk" firstAttribute="top" secondItem="Zia-Kn-gAI" secondAttribute="top" id="arK-3c-dJk"/>
+                            <constraint firstAttribute="trailing" secondItem="R5w-uB-bqk" secondAttribute="trailing" id="cEM-PU-5yJ"/>
+                            <constraint firstItem="R5w-uB-bqk" firstAttribute="leading" secondItem="Zia-Kn-gAI" secondAttribute="leading" id="rmo-xw-Gji"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Zia-Kn-gAI" firstAttribute="leading" secondItem="m0T-qG-NeD" secondAttribute="leading" constant="16" id="NJ5-nR-dBu"/>
+                    <constraint firstItem="Lb0-dz-PGY" firstAttribute="leading" secondItem="m0T-qG-NeD" secondAttribute="leading" constant="16" id="PA6-iP-StL"/>
+                    <constraint firstAttribute="trailing" secondItem="uv8-0R-1Rv" secondAttribute="trailing" constant="5" id="PdW-rr-n8z"/>
+                    <constraint firstItem="uv8-0R-1Rv" firstAttribute="centerY" secondItem="Lb0-dz-PGY" secondAttribute="centerY" id="Uvh-uq-aGV"/>
+                    <constraint firstAttribute="bottom" secondItem="Zia-Kn-gAI" secondAttribute="bottom" id="XOB-UL-yJx"/>
+                    <constraint firstItem="Lb0-dz-PGY" firstAttribute="top" secondItem="m0T-qG-NeD" secondAttribute="top" constant="15" id="fxm-Ko-dj5"/>
+                    <constraint firstAttribute="trailing" secondItem="Zia-Kn-gAI" secondAttribute="trailing" id="s3B-KB-1qD"/>
+                    <constraint firstItem="Zia-Kn-gAI" firstAttribute="top" secondItem="m0T-qG-NeD" secondAttribute="top" constant="50" id="uIw-Ct-Nzd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="ccs-gk-WNr"/>
+            <connections>
+                <outlet property="collectionView" destination="R5w-uB-bqk" id="m81-Gz-yhM"/>
+                <outlet property="newLabel" destination="Lb0-dz-PGY" id="oog-Xd-crz"/>
+                <outlet property="viewCollection" destination="Zia-Kn-gAI" id="62i-Z9-9jA"/>
+            </connections>
+            <point key="canvasLocation" x="287.02290076335879" y="-23.239436619718312"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

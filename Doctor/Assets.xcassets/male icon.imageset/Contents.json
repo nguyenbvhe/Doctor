@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "male icon.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Frame 45647.png",
+      "filename" : "male icon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "male icon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

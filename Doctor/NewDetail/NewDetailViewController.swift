@@ -22,9 +22,9 @@ class NewDetailViewController: UIViewController, WKNavigationDelegate {
         iconShareButton.layer.cornerRadius = iconShareButton.frame.size.width/2
         backButton.layer.cornerRadius = backButton.frame.size.width/2
         iconShareButton.layer.borderWidth = 1
-        iconShareButton.layer.borderColor = UIColor.gray.cgColor
+        iconShareButton.layer.borderColor = UIColor.systemGray3.cgColor
         backButton.layer.borderWidth = 1
-        backButton.layer.borderColor = UIColor.gray.cgColor
+        backButton.layer.borderColor = UIColor.systemGray3.cgColor
     }
 
     @IBAction func backButtonTapped(_ sender: Any) {

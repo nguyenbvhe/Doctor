@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="87" id="KGk-i7-Jjw" customClass="GenderTableViewCell" customModule="Doctor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giới tính" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acq-fk-oVr">
+                        <rect key="frame" x="20" y="5" width="53" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                        <color key="textColor" red="0.58823529409999997" green="0.60784313729999995" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="male icon 2" translatesAutoresizingMaskIntoConstraints="NO" id="nH4-oH-fLY">
+                        <rect key="frame" x="50" y="57" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="JRJ-3G-2Et"/>
+                            <constraint firstAttribute="width" secondItem="nH4-oH-fLY" secondAttribute="height" id="Vza-f1-m0L"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="male icon" translatesAutoresizingMaskIntoConstraints="NO" id="neJ-kq-Dwl">
+                        <rect key="frame" x="250" y="57" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="m5a-dH-TI9"/>
+                            <constraint firstAttribute="width" secondItem="neJ-kq-Dwl" secondAttribute="height" id="q5n-U0-KaO"/>
+                        </constraints>
+                    </imageView>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="m1G-Vp-P6j">
+                        <rect key="frame" x="20" y="47" width="280" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="SWY-cj-RnF"/>
+                        </constraints>
+                        <segments>
+                            <segment title="Nam"/>
+                            <segment title="Nữ"/>
+                        </segments>
+                    </segmentedControl>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="neJ-kq-Dwl" firstAttribute="trailing" secondItem="m1G-Vp-P6j" secondAttribute="trailing" constant="-30" id="6qp-TH-4UD"/>
+                    <constraint firstItem="neJ-kq-Dwl" firstAttribute="centerY" secondItem="m1G-Vp-P6j" secondAttribute="centerY" id="Elb-Ce-Srx"/>
+                    <constraint firstItem="Acq-fk-oVr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="FXJ-ha-biA"/>
+                    <constraint firstItem="nH4-oH-fLY" firstAttribute="centerY" secondItem="m1G-Vp-P6j" secondAttribute="centerY" id="Jec-3U-m79"/>
+                    <constraint firstAttribute="bottom" secondItem="m1G-Vp-P6j" secondAttribute="bottom" id="Sj1-kR-PqR"/>
+                    <constraint firstItem="m1G-Vp-P6j" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="a0o-26-hmJ"/>
+                    <constraint firstItem="nH4-oH-fLY" firstAttribute="leading" secondItem="m1G-Vp-P6j" secondAttribute="leading" constant="30" id="flv-XZ-JNV"/>
+                    <constraint firstAttribute="trailing" secondItem="m1G-Vp-P6j" secondAttribute="trailing" constant="20" id="kuf-F7-Jjt"/>
+                    <constraint firstItem="m1G-Vp-P6j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="nrj-5N-aju"/>
+                    <constraint firstItem="Acq-fk-oVr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="wAv-IQ-ElP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="chooseGenderSegmented" destination="m1G-Vp-P6j" id="qSQ-6U-cRK"/>
+                <outlet property="genderLabel" destination="Acq-fk-oVr" id="i6R-0W-ZDP"/>
+            </connections>
+            <point key="canvasLocation" x="125.19083969465649" y="22.183098591549296"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="male icon" width="20" height="20"/>
+        <image name="male icon 2" width="20.333333969116211" height="20"/>
+    </resources>
+</document>
