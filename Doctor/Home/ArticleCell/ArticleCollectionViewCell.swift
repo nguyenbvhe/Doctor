@@ -2,7 +2,7 @@ import UIKit
 import SDWebImage
 import Nuke
 
-class ArticleCollectionViewCell: UICollectionViewCell {
+class ArticleCollectionViewCell: UICollectionViewCell , SummaryMethod {
     
     @IBOutlet private weak var cycleView: UIView!
     @IBOutlet weak var createdLabel: UILabel!
