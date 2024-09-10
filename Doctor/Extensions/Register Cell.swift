@@ -1,8 +1,8 @@
 //
-//  RegisterCell.swift
+//  Register Cell.swift
 //  Doctor
 //
-//  Created by Minh Nguỵn on 8/9/24.
+//  Created by Minh Nguỵn on 9/9/24.
 //
 
 import Foundation

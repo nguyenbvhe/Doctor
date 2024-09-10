@@ -31,7 +31,7 @@ class PromotionTableViewCell: UITableViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         promoTionCollectionView.collectionViewLayout = layout
-        promoTionCollectionView.register(UINib(nibName: "ArticleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ArticleCollectionViewCell")
+        promoTionCollectionView.registerNib(cellType: ArticleCollectionViewCell.self)
     }
     
     // MARK: - Fetch Data
@@ -91,7 +91,7 @@ extension PromotionTableViewCell: UICollectionViewDataSource {
         cell.layer.borderColor = UIColor.systemGray.withAlphaComponent(0.2).cgColor  // Màu của khung
         cell.layer.masksToBounds = true // Đảm bảo rằng các góc của cell được bo sẽ không lộ ra
         cell.articleImageView.clipsToBounds = true
-        applyShadow(to: cell)
+      //  applyShadow(to: cell)
         cell.createdLabel.textColor = UIColor(red: 150/255, green: 155/255, blue: 171/255, alpha: 1)
         return cell
     }
